@@ -7,7 +7,7 @@ We used a pre-trained YOLOv8 model from Ultralytics to locate traffic signs in i
 ### Stage Two: Feed the cropped image to our own Convolutional Neural Network model
 We developed and trained a custom Convolutional Neural Network (CNN) to classified the cropped image from stage one. The encoder features four convolutional layers, each followed by a 2x2 max pooling layer with a stride of 2. This setup produces a 16x1x1 feature map, capturing high-level features. This feature map is then fed into a small ANN classifier with 244 neurons and produces an output layer of 26 classes.
 
-<img src="https://github.com/3ric03/TrafficSense/blob/main/img/model_architecture.jpg" width="1036px" height="600px"> 
+<img src="https://github.com/3ric03/TrafficSense/blob/main/img/model_architecture.jpg" width="1036px" height="500px"> 
 
 ## Input and Output Example
 In this simple example, we passed in a street view image with a Canadian stop sign, our program is able to bound the sign and classify it correctly with 99% confidence.
